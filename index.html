@@ -1,12 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>anzing lau</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chroclock — Time. Refined. Yours.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/secstyle.css" />
 </head>
+
 <body>
-    <h1>hidup jokowai</h1>
-</body>
-</html>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMobileMenu()">Tentang</a>
+        <a href="#collections" onclick="closeMobileMenu()">Koleksi</a>
+        <a href="#orders" onclick="closeMobileMenu()">Pesanan</a>
+        <a href="#order" onclick="closeMobileMenu()">Beli</a>
+    </div>
+
+    <nav id="navbar">
+        <a href="#" class="nav-logo">Chroclock</a>
+        <ul class="nav-links">
+            <li><a href="#about">Craft</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#orders">History</a></li>
+        </ul>
+        <a href="#order" class="nav-cta">Order Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <section class="hero">
+        <svg class="hero-clock-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="150" r="140" stroke="currentColor" stroke-width="1" />
+            <circle cx="150" cy="150" r="120" stroke="currentColor" stroke-width="0.5" />
+            <circle cx="150" cy="150" r="4" fill="currentColor" />
+            <line x1="150.0" y1="20.0" x2="150.0" y2="32.0" stroke="currentColor" stroke-width="2" />
+            <line x1="215.0" y1="37.42" x2="209.0" y2="47.81" stroke="currentColor" stroke-width="1" />
+            <line x1="262.58" y1="85.0" x2="252.19" y2="91.0" stroke="currentColor" stroke-width="1" />
+            <line x1="280.0" y1="150.0" x2="268.0" y2="150.0" stroke="currentColor" stroke-width="2" />
+            <line x1="262.58" y1="215.0" x2="252.19" y2="209.0" stroke="currentColor" stroke-width="1" />
+            <line x1="215.0" y1="262.58" x2="209.0" y2="252.19" stroke="currentColor" stroke-width="1" />
+            <line x1="150.0" y1="280.0" x2="150.0" y2="268.0" stroke="currentColor" stroke-width="2" />
+            <line x1="85.0" y1="262.58" x2="91.0" y2="252.19" stroke="currentColor" stroke-width="1" />
+            <line x1="37.42" y1="215.0" x2="47.81" y2="209.0" stroke="currentColor" stroke-width="1" />
+            <line x1="20.0" y1="150.0" x2="32.0" y2="150.0" stroke="currentColor" stroke-width="2" />
+            <line x1="37.42" y1="85.0" x2="47.81" y2="91.0" stroke="currentColor" stroke-width="1" />
+            <line x1="85.0" y1="37.42" x2="91.0" y2="47.81" stroke="currentColor" stroke-width="1" />
+
+            <line x1="150" y1="150" x2="108" y2="90" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="150" y1="150" x2="198" y2="98" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="150" y1="150" x2="155" y2="210" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" />
+        </svg>
+        <p class="hero-eyebrow fade-in">Premium Indonesian Watch Brand</p>
+        <h1 class="hero-title fade-in delay-1">Chro<em>clock</em></h1>
+        <p class="hero-tagline fade-in delay-2">Time &nbsp;·&nbsp; Refined &nbsp;·&nbsp; Yours</p>
+        <div class="hero-actions fade-in delay-3">
+            <a href="#collections" class="btn-primary">Shop Now</a>
+            <a href="#about" class="btn-ghost">Our Craft</a>
+        </div>
+    </section>
+
+    <div class="ticker">
+        <div class="ticker-inner">
+            <span class="ticker-item">Swiss Movement<span class="dot"></span></span>
+            <span class="ticker-item">Sapphire Crystal<span class="dot"></span></span>
+            <span class="ticker-item">100m Water Resistant<span class="dot"></span></span>
+            <span class="ticker-item">2-Year Warranty<span class="dot"></span></span>
+            <span class="ticker-item">Handcrafted<span class="dot"></span></span>
+            <span class="ticker-item">Limited Edition<span class="dot"></span></span>
+            <span class="ticker-item">Swiss Movement<span class="dot"></span></span>
+            <span class="ticker-item">Sapphire Crystal<span class="dot"></span></span>
+            <span class="ticker-item">100m Water Resistant<span class="dot"></span></span>
+            <span class="ticker-item">2-Year Warranty<span class="dot"></span></span>
+            <span class="ticker-item">Handcrafted<span class="dot"></span></span>
+            <span class="ticker-item">Limited Edition<span class="dot"></span></span>
+
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="about-quote fade-in">
+            <blockquote>"A watch is not just a timepiece. It is a statement of who you are."</blockquote>
+        </div>
+        <div class="about-divider"></div>
+        <div class="about-text fade-in delay-2">
+            <span class="about-label">Our Craft</span>
+            <p>Chroclock lahir dari obsesi terhadap presisi dan keindahan yang tak lekang waktu. Setiap jam tangan kami
+                adalah perpaduan antara keahlian tradisional dan desain kontemporer yang menjawab estetika generasi
+                baru.</p>
+            <p>Kami percaya bahwa kemewahan sejati bukan tentang harga — melainkan tentang detail, kejujuran material,
+                dan makna di balik setiap detik yang berlalu.</p>
+        </div>
+    </section>
